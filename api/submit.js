@@ -92,7 +92,11 @@ module.exports = async (req,res) => {
       });
       const result = await tgResponse.json();
       if (!tgResponse.ok || !result.ok) {
-        console.error("Telegram delivery failed", result.error_code || tgResponse.status);
+        console.error("Telegram delivery failed", {
+  status: tgResponse.status,
+  code: result.error_code,
+  description: result.description
+});
         return res.status(502).json({error:"Не удалось доставить заявку в Telegram. Попробуйте ещё раз позже."});
       }
     }
