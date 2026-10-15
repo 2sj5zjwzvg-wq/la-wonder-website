@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17152d">
+  <meta name="description" content="Персональные мультфильмы, нейрофото, сказки и песни от L&A Wonder. Там, где оживают чудеса.">
+  <title>L&A Wonder — анкета заказа</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="L&A Wonder — на главную">
+      <span class="brand-mark">L<span>&</span>A</span>
+      <span class="brand-name">WONDER<small>ТАМ, ГДЕ ОЖИВАЮТ ЧУДЕСА</small></span>
+    </a>
+    <a class="header-link" href="#order">Заполнить анкету <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="sparkle">✦</span> ТВОРЧЕСКАЯ СТУДИЯ L&A WONDER</div>
+        <h1>Ваша идея.<br><span>Наше волшебство.</span></h1>
+        <p class="hero-description">Персональные мультфильмы, нейрофото, сказки и песни — создаём истории, в которых главное место занимаете вы и ваши близкие.</p>
+        <a class="primary-button hero-button" href="#order">Создать свой проект <span aria-hidden="true">→</span></a>
+        <div class="hero-note"><span class="note-star">✦</span><span>Расскажите о задумке — мы превратим её в творческое задание для вашего будущего проекта.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Сказочная иллюстрация звёздного неба">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="moon">✦</div>
+        <div class="planet planet-one"></div><div class="planet planet-two"></div>
+        <div class="art-glow"></div>
+        <div class="floating-card card-top"><span>✧</span> Идея становится историей</div>
+        <div class="floating-card card-bottom"><span>✦</span> Сделано специально для вас</div>
+        <span class="star star-a">✦</span><span class="star star-b">✧</span><span class="star star-c">✦</span><span class="star star-d">✧</span>
+      </div>
+    </section>
+
+    <section class="services-intro" id="order">
+      <div>
+        <div class="eyebrow">ШАГ 1 · ВЫБОР УСЛУГ</div>
+        <h2>Какое чудо создаём?</h2>
+        <p>Можно выбрать несколько услуг — общие данные заполняются только один раз.</p>
+      </div>
+      <div class="step-counter"><span id="selected-count">0</span><small>услуг выбрано</small></div>
+    </section>
+
+    <form id="order-form" novalidate>
+      <div id="service-grid" class="service-grid" aria-label="Выберите услуги"></div>
+
+      <section class="form-panel common-panel">
+        <div class="panel-heading">
+          <div class="section-icon">01</div>
+          <div><div class="eyebrow">ШАГ 2 · КОНТАКТЫ</div><h3>Давайте познакомимся</h3><p>Укажите, как с вами связаться по заказу.</p></div>
+        </div>
+        <div class="field-grid">
+          <label class="field"><span>ФИО заказчика <b>*</b></span><input name="fullName" autocomplete="name" required maxlength="160" placeholder="Иванов Иван Иванович"></label>
+          <label class="field"><span>Телефон или Telegram <b>*</b></span><input name="contact" autocomplete="tel" required maxlength="120" placeholder="@username или +7…"></label>
+          <label class="field"><span>Электронная почта</span><input name="email" type="email" autocomplete="email" maxlength="160" placeholder="name@example.com"></label>
+          <label class="field"><span>Желаемый срок</span><input name="deadline" maxlength="120" placeholder="Например, до 20 декабря"></label>
+        </div>
+      </section>
+
+      <div id="questionnaires"></div>
+
+      <section class="form-panel final-panel">
+        <div class="panel-heading">
+          <div class="section-icon">✦</div>
+          <div><div class="eyebrow">ПОСЛЕДНИЙ ШАГ</div><h3>Почти готово!</h3><p>Добавьте общие пожелания, если хотите.</p></div>
+        </div>
+        <label class="field"><span>Дополнительные комментарии</span><textarea name="comments" rows="4" maxlength="2000" placeholder="Важные детали, идеи или вопросы к студии…"></textarea></label>
+        <label class="consent"><input type="checkbox" name="consent" required><span>Я согласен(на) на обработку указанных персональных данных для связи по этому заказу. <b>*</b></span></label>
+        <input class="website-trap" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div id="form-error" class="form-message error-message" role="alert" hidden></div>
+        <div id="form-success" class="form-message success-message" role="status" hidden></div>
+        <button id="submit-button" class="primary-button submit-button" type="submit">Отправить заявку <span aria-hidden="true">→</span></button>
+        <p class="privacy-note">Пожалуйста, не указывайте пароли и другую лишнюю конфиденциальную информацию. Фотографии и файлы сайт не загружает — можно добавить ссылки на материалы.</p>
+      </section>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#">L&A Wonder</a>
+    <span>Персональные истории, созданные с фантазией.</span>
+    <span>© <span id="year"></span> L&A Wonder</span>
+  </footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>
